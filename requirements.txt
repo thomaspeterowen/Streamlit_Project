@@ -2,3 +2,4 @@ matplotlib
 pandas
 bokeh==2.4.3
 numpy
+sqlalchemy
