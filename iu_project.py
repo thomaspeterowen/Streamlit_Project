@@ -16,7 +16,7 @@ class DatabaseManager:
     """
     def __init__(self, db_url="sqlite:///functions.sqlite"):
         """
-        Initializes the DatabaseManager with a connection to the specified SQLite database.
+        Initialises the DatabaseManager with a connection to the specified SQLite database.
         
         Parameters:
         db_url (str): The URL of the database.
@@ -86,7 +86,7 @@ class DataVisualiser(DatabaseManager):
     """
     def __init__(self, db_url="sqlite:///functions.sqlite"):
         """
-        Initializes the DataVisualiser with a connection to the specified SQLite database.
+        Initialises the DataVisualiser with a connection to the specified SQLite database.
         
         Parameters:
         db_url (str): The URL of the database.
@@ -184,14 +184,14 @@ class DataVisualiser(DatabaseManager):
 
     def visualise_data(self, show_filtered):
         """
-        Visualizes the training data, ideal functions, and test data using Bokeh and Streamlit.
+        Visualises the training data, ideal functions, and test data using Bokeh and Streamlit.
         
         Parameters:
         show_filtered (bool): Whether to show only filtered test data.
         """
         training_df = self.dataset_training
         ideal_df = self.dataset_ideal
-        # Changing displayed data base on variable "show_filtered".
+        # Change displayed data base on variable "show_filtered".
         if show_filtered:
             test_results_df = self.fetch_data('test_results')
             test_results_df = test_results_df[test_results_df['ideal_function'].notnull()]
@@ -224,7 +224,7 @@ class DataVisualiser(DatabaseManager):
 
     def run(self, test_data_file, threshold, show_filtered):
         """
-        Runs the complete process: load data, process it, and visualize the results.
+        Runs the complete process: load data, process it, and visualise the results.
         
         Parameters:
         test_data_file (str): The path to the test data CSV file.
@@ -281,7 +281,7 @@ def main():
              
             - To load the analysis, users must first upload the test data csv file.
             - User can toggle to see all data or filtered data, meaning that only points that have been assigned to one of the chosen ideal functions will be shown.
-            - When the above filter is used, users can also select a "Threshold Multiplier" which asjust how sensitive the calculation is, resulting in more or less points being shown in the plot.
+            - When the above filter is used, users can also select a "Threshold Multiplier" which ajust how sensitive the calculation is, resulting in more or less points being shown in the plot.
 
     ''')
 

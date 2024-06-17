@@ -21,7 +21,7 @@ class TestDataVisualizer(unittest.TestCase):
         mock_create_engine.return_value = self.mock_engine
         self.mock_engine.connect.return_value = self.mock_conn
 
-        # Instantiate the DataVisualizer
+        # Instantiate the DataVisualiser
         self.visualizer = DataVisualiser()
 
     def test_load_csv_to_db(self):
